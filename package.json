@@ -1,0 +1,17 @@
+{
+  "name": "menumaker",
+  "version": "1.0.0",
+  "description": "tool for making bash interactive menus from a configuring yaml file",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "bin": {
+    "build": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

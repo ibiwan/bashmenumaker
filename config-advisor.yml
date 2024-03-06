@@ -1,0 +1,47 @@
+messages:
+  quit: Thank you, come again.
+  error: You've lost me. Shall we try again?
+menu:
+    title: Advisor Repo Actions
+    entries:
+      - color: green
+        title: Docker Images/Containers
+        submenu: 
+          entries:
+            - color: green
+              title: Build and start development containers
+              command: make dev
+            - title: Shell into API container
+              command: make api
+            - title: Shell into NGINX container
+              command: make nginx
+            - title: Shell into DataBase container
+              command: make db
+            - color: red
+              title: Stop and Remove dev containers
+              command: Make down
+      - color: green
+        title: Database Actions
+        submenu:
+          entries:
+            - color: green
+              title: Initialize DB and Fixtures
+              command: make init
+            - color: yellow
+              title: Reinitialize Fixtures
+              command: make init-fixtures
+            - color: red
+              title: Drop DataBase
+              command: make drop-db
+      - color: green
+        title: Quality and Testing
+        submenu:
+          entries:
+            - color: green
+              title: Run Helm Lint, Coding Standards, PHPStan, PHPUnit
+              command: make test
+            - title: Run CS-Fix for php-cs errors
+              command: make fix-cs
+            - color: green
+              title: Run all of the above, plus Coverage
+              command: make test-coverage

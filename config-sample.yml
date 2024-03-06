@@ -1,0 +1,68 @@
+colors:
+  default: 39
+  black: 30
+  white: 37
+  red: 31
+  green: 32
+  yellow: 33
+  blue: 34
+  magenta: 35
+  cyan: 36
+messages:
+  quit: Thank you, come again.
+  error: You've lost me; shall we try again?
+menu:
+  - color: magenta
+    title: MyProject Repo Actions
+    entries:
+      - color: green
+        title: Docker Images/Containers
+        submenu: 
+          color: magenta
+          title: Docker Images/Containers
+          entries:
+            - color: green
+              title: Build and start development containers
+              command: make dev
+            - color: blue
+              title: Shell into API container
+              command: make api
+            - color: blue
+              title: Shell into NGINX container
+              command: make nginx
+            - color: blue
+              title: Shell into DataBase container
+              command: make db
+            - color: red
+              title: Stop and Remove dev containers
+              command: Make down
+      - color: green
+        title: Database Actions
+        submenu: database
+          color: magenta
+          title: Database Actions
+          entries:
+            - color: green
+              title: Initialize DB and Fixtures
+              command: make init
+            - color: yellow
+              title: Reinitialize Fixtures
+              command: make init-fixtures
+            - color: red
+              title: Drop DataBase
+              command: make drop-db
+      - color: green
+        title: Quality and Testing
+        submenu: tests
+          color: magenta
+          title: Quality and Testing
+          entries:
+            - color: green
+              title: Run Helm Lint, Coding Standards, PHPStan, PHPUnit
+              command: make test
+            - color: blue
+              title: Run CS-Fix for php-cs errors
+              command: make fix-cs
+            - color: green
+              title: Run all of the above, plus Coverage
+              command: make test-coverage
