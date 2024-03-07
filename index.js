@@ -1,4 +1,6 @@
-#!/usr/bin/node
+#!/usr/bin/env node
+
+console.log("RUNNING");
 
 const fs = require("fs");
 const yaml = require("js-yaml");

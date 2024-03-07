@@ -1,12 +1,16 @@
 {
-  "name": "menumaker",
+  "name": "bashmenumaker",
   "version": "1.0.0",
   "description": "tool for making bash interactive menus from a configuring yaml file",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibiwan/bashmenumaker.git"
+  },
   "main": "index.js",
   "scripts": {
     "build": "node index.js"
   },
-  "bin": "index.js",
+  "bin": "./index.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
