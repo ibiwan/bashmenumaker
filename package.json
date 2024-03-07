@@ -10,7 +10,9 @@
   "scripts": {
     "build": "node index.js"
   },
-  "bin": "./index.js",
+  "bin": {
+    "gen": "./index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
